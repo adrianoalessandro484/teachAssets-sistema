@@ -1,0 +1,6 @@
+<Solution>
+  <Project Path="Innovatech.API/Innovatech.API.csproj" />
+  <Project Path="Innovatech.Application/Innovatech.Application.csproj" />
+  <Project Path="Innovatech.Domain/Innovatech.Domain.csproj" />
+  <Project Path="Innovatech.Infrastructure/Innovatech.Infrastructure.csproj" />
+</Solution>
