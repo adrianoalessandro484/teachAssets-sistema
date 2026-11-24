@@ -1,4 +1,11 @@
-const API_BASE_URL = import.meta.env.VITE_API_URL ?? 'http://localhost:5065/api'
+const rawApiUrl = (
+  import.meta.env.VITE_API_URL?.trim() ||
+  (import.meta.env.PROD
+    ? 'https://api-techassets-adriano.argmstudio.com/api'
+    : 'http://localhost:5065/api')
+).replace(/\/+$/, '')
+
+const API_BASE_URL = rawApiUrl.endsWith('/api') ? rawApiUrl : `${rawApiUrl}/api`
 
 const TOKEN_STORAGE_KEY = 'techasset_token'
 const USER_STORAGE_KEY = 'techasset_user'
